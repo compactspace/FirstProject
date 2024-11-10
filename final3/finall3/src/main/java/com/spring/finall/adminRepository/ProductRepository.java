@@ -28,7 +28,7 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Integer>
 	
 	
 	//쫌있다가 product 테이블에 제품군을 추가 한뒤 그것을 가져오도록 하며
-	//게시빨 또 조인 해야하네???
+	
 	@Query(value="select * from product where product_group =:product_group", nativeQuery = true )
 	List<ProductEntity> select(@Param("product_group") String product_group);
 	
